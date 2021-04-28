@@ -6,6 +6,14 @@ td{
     width: 133px;
     height: 133px;
     border: 1px solid black;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+td:hover{
+    cursor: pointer;
+    background-color: #c3c1af33;
 }
 
 tr:first-child td{
@@ -26,4 +34,13 @@ td:last-child {
 
 table{
     border-collapse: collapse;
+}
+
+.img-shape{
+    height: 100px;
+    width: 100px;
+}
+
+.cross{
+    z-index: 5;
 }
