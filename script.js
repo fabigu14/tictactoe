@@ -1,10 +1,23 @@
 let sign = ['img/circle.ico', 'img/x.ico'];
-
+let fieldsCoveredByO = [];
+let fieldsCoveredByX = [];
 let statePlayer = 0;
 
 function showSign(id){
-    document.getElementById(id).innerHTML = getSign(statePlayer);
-    changeState();
+    if(!fieldsCoveredByO.includes(id) && !fieldsCoveredByX.includes(id)){
+        document.getElementById(id).innerHTML = getSign(statePlayer);
+        addToArray(id);
+        changeState();
+    }
+}
+
+function addToArray(id){
+    if(statePlayer ===  0){
+        fieldsCoveredByO.push(id);
+    }
+    else{
+        fieldsCoveredByX.push(id);
+    }
 }
 
 function getSign(statePlayer){
