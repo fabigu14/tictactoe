@@ -115,4 +115,22 @@ table{
         width: 100px;
         height: 100px;
     }
+
+    .players{
+        width: 300px;
+        font-size: 12px;
+    }
+
+    .players img{
+        width: 30px;
+    }
+
+    .img-shape{
+        width: 70px;
+        height: 70px;
+    }
+
+    .end-screen img{
+        width: 300px;
+    }
 }
