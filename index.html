@@ -8,7 +8,28 @@
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
 </head>
-<body>
+<body onload="changeHighlight('player2','player1')">
+
+    <div class="players">
+        <div id="player1" class="player">
+            <span>Spieler 1</span>
+            <img src="img/circle.ico" alt="img of circle" width="50px">
+        </div>
+        <div id="player2" class="player opacity">
+            <span>Spieler 2</span>
+            <img src="img/x.ico" alt="img of X" width="50px">
+        </div>
+    </div>
+
+    <div id="line-0" class="horizontal-line" style="top: 270px"></div>
+    <div id="line-1" class="horizontal-line" style="top: 408px;"></div>
+    <div id="line-2" class="horizontal-line" style="top: 542px"></div>
+    <div id="line-3" class="horizontal-line make-vertical" style="left: 238px; top: 408px;"></div>
+    <div id="line-4" class="horizontal-line make-vertical" style="left: 375px; top: 408px;"></div>
+    <div id="line-5" class="horizontal-line make-vertical" style="left: 512px; top: 408px;"></div>
+    <div id="line-6" class="horizontal-line" style="left: 339px; top: 406px; transform: rotate(-45deg) scaleX(0.0); width: 371px;"></div>
+    <div id="line-7" class="horizontal-line" style="left: 339px; top: 406px; transform: rotate(45deg) scaleX(0.0); width: 371px;"></div>
+
     <table id="playingField">
         <tr>
             <td id="1" onclick="showSign(1)"></td>
@@ -25,11 +46,20 @@
             <td id="8" onclick="showSign(8)"></td>
             <td id="9" onclick="showSign(9)"></td>
         </tr>
+        
     </table>
-    <div id="winnerScreen" class="winner-screen d-none">
+
+    <div id="winnerScreen" class="end-screen d-none">
         <img src="img/trophy.png" alt="img of trophy" width="400px">
         <h2 id="winner"></h2>
         <button onclick="resetGame()" type="button" class="btn btn-secondary btn-lg">Erneut spielen</button>
     </div>
+
+    <div id="drawScreen" class="end-screen d-none">
+        <img src="img/trophy.png" alt="img of trophy" width="400px">
+        <h2 id="drawText"></h2>
+        <button onclick="resetGame()" type="button" class="btn btn-secondary btn-lg">Erneut spielen</button>
+    </div>
+    <div id="overlay" class="overlay d-none"></div>
 </body>
 </html>
